@@ -1,0 +1,104 @@
+@charset "UTF-8";
+#detail-page {
+  color: white;
+  padding: 30px 0;
+  min-height: 70vh;
+  position: relative;
+}
+#detail-page:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+#detail-page .detail-page {
+  position: relative;
+  z-index: 3;
+  display: flex;
+}
+#detail-page .detail-page--img {
+  box-shadow: 0 1px 20px 9px rgba(211, 201, 201, 0.75);
+  -webkit-box-shadow: 0 1px 20px 9px rgba(201, 179, 179, 0.75);
+  -moz-box-shadow: 0 1px 20px 9px rgba(217, 203, 203, 0.75);
+  position: relative;
+}
+#detail-page .detail-page--img:hover:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  content: "Расширить";
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  transition: 0.3s;
+  font-size: 1.8rem;
+  background: rgba(0, 0, 0, 0.75);
+  cursor: grab;
+}
+#detail-page .detail-page--img:hover {
+  box-shadow: none;
+}
+#detail-page .detail-page--description {
+  margin: 0 5%;
+}
+#detail-page .detail-page--description h2 {
+  color: slategrey;
+}
+#detail-page .detail-page--description .ganre {
+  display: flex;
+}
+#detail-page .detail-page--description .rating {
+  font-size: 20px;
+  font-weight: 600;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #26266e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #b9bd23;
+}
+
+.cast {
+  padding: 5% 2%;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  width: 50vw;
+  height: 70%;
+  top: 10%;
+  left: 25%;
+  background: white;
+  text-align: end;
+}
+.modal--description {
+  width: 100%;
+  padding: 0 20px;
+  color: black;
+}
+.modal--description__close-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  text-align: end;
+  margin-bottom: 20px;
+}
+
+#blur-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.63);
+  backdrop-filter: blur(5px);
+}
+
+/*# sourceMappingURL=DetailPage.css.map */
